@@ -1,34 +1,28 @@
 {
-  "name": "react-native-step-progress-bar-custom",
-  "version": "1.0.0",
-  "description": "React native component for step progress a fork of react-native-step-progress-bar",
+  "name": "custom-step-progress-bar-react",
+  "version": "1.0.1",
+  "description": "npm package for custom progress bar",
   "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
   "scripts": {
     "test": "npm test"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
-    "url": "git+https://github.com/amanrajtoppoart007/react-native-step-progress-bar-custom.git",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/amanrajtoppoart007/react-native-step-progress-bar-custom.git"
   },
   "keywords": [
+    "step",
     "react-native",
-    "step",
-    "progress",
-    "bar",
-    "step",
-    "progress"
+    "expo",
+    "progress-bar"
   ],
   "author": "amanrajtoppoart007",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tvankith/react-native-step-progress-bar/issues"
+    "url": "https://github.com/amanrajtoppoart007/react-native-step-progress-bar-custom/issues"
   },
-  "homepage": "https://github.com/tvankith/react-native-step-progress-bar#readme",
-  "private": false,
-  "directories": {
-    "doc": "doc"
-  }
+  "homepage": "https://github.com/amanrajtoppoart007/react-native-step-progress-bar-custom#readme"
 }
