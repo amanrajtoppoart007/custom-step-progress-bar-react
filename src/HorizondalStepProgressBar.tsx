@@ -1,9 +1,9 @@
 import { View, StyleSheet, Text, StyleProp, ViewStyle, TextStyle } from 'react-native';
 
 import React from 'react';
-import { Step } from 'react-native-step-progress-bar/src/Step';
-import { StepProgressBarProps } from 'react-native-step-progress-bar/src/types';
-import { Bar } from 'react-native-step-progress-bar/src/Bar';
+import { Step } from 'custom-step-progress-bar-react/src/Step';
+import { StepProgressBarProps } from 'custom-step-progress-bar-react/src/types';
+import { Bar } from 'custom-step-progress-bar-react/src/Bar';
 
 const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
     const barLength = props.barLength;
@@ -12,6 +12,17 @@ const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
     const showLabel = true
     const itemCount = props.data.length
     const StepProgressBarWidth = (itemCount * stepWidth) + ((itemCount - 1) * barLength);
+
+    function makeid(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+
     return (
         <View style={[styles.flexrow, { width: StepProgressBarWidth }]}>
             {props.data.map((item, index) => {
@@ -71,15 +82,15 @@ const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
                                     stepWidth={stepWidth}
                                     stepColor={props.stepColor}
                                 />
-                            : <Step
-                                radius={stepHeight / 2}
-                                index={index}
-                                label={label}
-                                activeStep={activeStep}
-                                stepHeight={stepHeight}
-                                stepWidth={stepWidth}
-                                stepColor={props.stepColor}
-                            />
+                                : <Step
+                                    radius={stepHeight / 2}
+                                    index={index}
+                                    label={label}
+                                    activeStep={activeStep}
+                                    stepHeight={stepHeight}
+                                    stepWidth={stepWidth}
+                                    stepColor={props.stepColor}
+                                />
                             }
                         </View>
                     )
@@ -120,12 +131,14 @@ const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
                     )
                 }
 
-                let key = (Math.floor(Math.random() * 10000)).toString();
+                let number = (Math.floor(Math.random() * 10000)).toString();
+                let str = makeid(8);
+
 
                 return (
 
                     <View
-                        key={`step-bar-item-key-${key}`}
+                        key={`step-bar-item-key-${str}-${number}`}
                         style={[stepContainerStyle]}>
                         {
                             showLabel && props.labelPosition === "TOP" && renderLabel()
@@ -149,7 +162,9 @@ const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
 const styles = StyleSheet.create({
     flexrow: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     flexcol: {
         display: 'flex',
