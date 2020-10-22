@@ -1,2 +1,2 @@
-# react-native-step-progress-bar-custom
+# custom step progress bar react
  
