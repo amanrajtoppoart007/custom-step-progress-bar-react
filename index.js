@@ -1,3 +1,3 @@
-import {StepProgressBar} from 'src/StepProgressBar';
+import {StepProgressBar} from './src/StepProgressBar';
 
 export {StepProgressBar}
