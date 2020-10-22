@@ -7,7 +7,7 @@ import { StepProgressBarProps } from './types';
 const StepProgressBar = (props:StepProgressBarProps)=>{
     const orientation = props.orientation
     return (
-        orientation === "horizontal" ? <HorizondalStepProgressBar {...props}/> : <VerticalStepProgressBar {...props}/>
+        orientation === "horizondal" ? <HorizondalStepProgressBar {...props}/> : <VerticalStepProgressBar {...props}/>
     )
 }
 

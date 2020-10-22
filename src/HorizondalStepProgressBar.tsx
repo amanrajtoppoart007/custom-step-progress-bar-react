@@ -1,9 +1,9 @@
 import { View, StyleSheet, Text, StyleProp, ViewStyle, TextStyle } from 'react-native';
 
 import React from 'react';
-import { Step } from 'custom-step-progress-bar-react/src/Step';
-import { StepProgressBarProps } from 'custom-step-progress-bar-react/src/types';
-import { Bar } from 'custom-step-progress-bar-react/src/Bar';
+import { Step } from './Step';
+import { StepProgressBarProps } from './types';
+import { Bar } from './Bar';
 
 const HorizondalStepProgressBar = (props: StepProgressBarProps) => {
     const barLength = props.barLength;

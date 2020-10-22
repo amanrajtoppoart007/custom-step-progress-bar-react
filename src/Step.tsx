@@ -1,7 +1,7 @@
 import { StyleProp, View } from "react-native";
 import { ViewStyle } from "react-native/Libraries/StyleSheet/StyleSheet";
 import React from 'react';
-import { StepProps } from "react-native-step-progress-bar/src/types";
+import { StepProps } from "./types";
 
 export const Step = (props: StepProps) => {
     const { radius, stepColor, stepHeight, stepWidth } = props;
