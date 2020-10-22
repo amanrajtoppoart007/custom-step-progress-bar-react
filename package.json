@@ -1,6 +1,6 @@
 {
   "name": "custom-step-progress-bar-react",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "npm package for custom progress bar",
   "main": "index.js",
   "directories": {
